@@ -1,0 +1,12 @@
+/Users/shaneelkumar/repos/indie-band-site/api/out/api
+/Users/shaneelkumar/repos/indie-band-site/api/out/appsettings.Development.json
+/Users/shaneelkumar/repos/indie-band-site/api/out/appsettings.json
+/Users/shaneelkumar/repos/indie-band-site/api/out/api.dll
+/Users/shaneelkumar/repos/indie-band-site/api/out/api.deps.json
+/Users/shaneelkumar/repos/indie-band-site/api/out/api.runtimeconfig.json
+/Users/shaneelkumar/repos/indie-band-site/api/out/api.pdb
+/Users/shaneelkumar/repos/indie-band-site/api/out/Microsoft.AspNetCore.OpenApi.dll
+/Users/shaneelkumar/repos/indie-band-site/api/out/Microsoft.OpenApi.dll
+/Users/shaneelkumar/repos/indie-band-site/api/out/Swashbuckle.AspNetCore.Swagger.dll
+/Users/shaneelkumar/repos/indie-band-site/api/out/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/shaneelkumar/repos/indie-band-site/api/out/Swashbuckle.AspNetCore.SwaggerUI.dll
