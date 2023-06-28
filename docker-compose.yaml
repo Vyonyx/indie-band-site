@@ -12,17 +12,39 @@ services:
       - /app/.next
     ports:
       - 3000:3000
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: dev_user
+      WORDPRESS_DB_PASSWORD: dev_password
+      WORDPRESS_DB_NAME: wordpress_db
+    volumes:
+      - ./data/wordpress:/var/www/html
+
   db:
     image: mysql
     restart: always
     container_name: local-db
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: dev_password
+      MYSQL_RANDOM_ROOT_PASSWORD: "password"
     volumes:
-      - ./data/mysql-data:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
+
   adminer:
     image: adminer
     restart: always
     container_name: local-adminer
     ports:
       - 3080:8080
+
+volumes:
+  wordpress:
+  db:
