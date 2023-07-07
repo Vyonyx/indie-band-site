@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import Container from "../components/container";
 
 export type Album = {
@@ -29,12 +31,22 @@ type AlbumProps = {
 
 function AlbumCard({ album }: AlbumProps) {
   const { title, year, image, listenHere } = album;
+  const [hover, setHover] = useState(false)
+
   return (
-    <div>
-      <div>{title}</div>
-      <div>{year}</div>
-      {image && <div>Has Image</div>}
-      {listenHere && <div>Listen Here</div>}
+    <div
+      className="w-80 aspect-square bg-cover"
+      style={{ backgroundImage: `url(${image})` }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {hover && (
+        <div className="bg-black bg-opacity-50 w-full h-full text-white flex flex-col justify-center items-center">
+          <p>{title}</p>
+          <p>{year}</p>
+          {listenHere && <p>listen here</p>}
+        </div>
+      )}
     </div>
   );
 }
