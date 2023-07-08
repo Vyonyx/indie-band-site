@@ -16,8 +16,8 @@ type Props = {
 
 function Carousel({ albums }: Props) {
   return (
-    <Container>
-      <div className="flex gap-10">
+    <Container cssExtension="overflow-x-scroll">
+      <div className="flex gap-10 w-fit py-10 mx-auto">
         {albums &&
           albums.map((album) => <AlbumCard key={album.title} album={album} />)}
       </div>
