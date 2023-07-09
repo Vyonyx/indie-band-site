@@ -35,7 +35,7 @@ function AlbumCard({ album }: AlbumProps) {
 
   return (
     <div
-      className="w-80 aspect-square bg-cover"
+      className="w-60 aspect-square bg-cover"
       style={{ backgroundImage: `url(${image})` }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
