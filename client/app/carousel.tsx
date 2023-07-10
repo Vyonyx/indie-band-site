@@ -20,7 +20,7 @@ function Carousel({ albums }: Props) {
   return (
     <Container cssExtension="overflow-x-scroll">
       <section
-        className="flex justify-center items-center gap-10 relative min-w-full w-fit p-10 mx-auto bg-center transition-all"
+        className="flex justify-center items-center gap-10 relative min-w-full w-fit p-10 mx-auto bg-center bg-cover transition-all"
         style={{ backgroundImage: bg ? `url(${bg})` : 'none' }}
       >
         <div
