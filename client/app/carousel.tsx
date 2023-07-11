@@ -24,24 +24,26 @@ function Carousel({ albums }: Props) {
   })
 
   return (
-    <Container cssExtension="overflow-x-scroll">
-      <section
-        className="flex justify-center items-center gap-10 relative min-w-full w-fit p-10 mx-auto bg-center bg-cover transition-all"
-        style={{ backgroundImage: albumData.image ? `url(${albumData.image})` : 'none' }}
-      >
-        <div
-          id="bg-overlay"
-          className="absolute top-0 left-0 w-full h-full backdrop-grayscale"
-        ></div>
-        {albums &&
-          albums.map((album) => (
-            <AlbumCard
-              key={album.title}
-              album={album}
-              handleAlbumChange={setAlbumName}
-            />
-          ))}
-      </section>
+    <Container>
+      <div className="overflow-x-scroll">
+        <section
+          className="flex justify-center items-center gap-10 relative min-w-full w-fit p-10 mx-auto bg-center bg-cover transition-all"
+          style={{ backgroundImage: albumData.image ? `url(${albumData.image})` : 'none' }}
+        >
+          <div
+            id="bg-overlay"
+            className="absolute top-0 left-0 w-full h-full backdrop-grayscale"
+          ></div>
+          {albums &&
+            albums.map((album) => (
+              <AlbumCard
+                key={album.title}
+                album={album}
+                handleAlbumChange={setAlbumName}
+              />
+            ))}
+        </section>
+      </div>
       <div className="flex justify-between items-center border-black border-b-2">
         {albumData.title && (
           <h1 className="text-lg text-center my-4">
