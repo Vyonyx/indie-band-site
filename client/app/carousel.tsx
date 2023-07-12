@@ -80,12 +80,6 @@ function AlbumCard({ album, handleAlbumChange }: AlbumProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {hover && (
-        <div className="bg-black bg-opacity-50 w-full h-full text-white flex flex-col justify-center items-center">
-          <p>{title}</p>
-          <p>{year}</p>
-        </div>
-      )}
     </div>
   );
 }
