@@ -6,7 +6,7 @@ type Props = {
 };
 
 function Container({ children, cssExtension = "" }: Props) {
-  return <div className={"w-full max-w-screen-lg mx-auto" + ' ' + cssExtension}>{children}</div>;
+  return <div className={"container mx-auto" + ' ' + cssExtension}>{children}</div>;
 }
 
 export default Container;

@@ -15,7 +15,7 @@ type Props = {
 };
 
 function Carousel({ albums }: Props) {
-  const [albumData, setAlbumName] = useState<Album>({
+  const [albumData, setAlbumData] = useState<Album>({
     title: 'Albums',
     year: null,
     image: albums[0].image || '',
@@ -25,48 +25,29 @@ function Carousel({ albums }: Props) {
 
   return (
     <Container>
-      <div className="overflow-x-scroll">
-        <section
-          className="flex justify-center items-center gap-10 relative min-w-full w-fit p-10 mx-auto bg-center bg-cover transition-all"
-          style={{ backgroundImage: albumData.image ? `url(${albumData.image})` : 'none' }}
-        >
-          <div
-            id="bg-overlay"
-            className="absolute top-0 left-0 w-full h-full backdrop-grayscale"
-          ></div>
-          {albums &&
-            albums.map((album) => (
+      <div
+        className="w-full overflow-x-scroll py-2"
+        style={{ scrollbarWidth: 'thin' }}
+      >
+        <ul className="w-fit min-w-full flex justify-center items-center bg-pink-300 gap-10 p-8">
+          {albums.map((album, idx) => (
+            <li key={idx}>
               <AlbumCard
-                key={album.title}
                 album={album}
-                handleAlbumChange={setAlbumName}
+                handleAlbumChange={setAlbumData}
               />
-            ))}
-        </section>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="flex justify-between items-center border-black border-b-2">
-        {albumData.title && (
-          <h1 className="text-lg text-center my-4">
-            {albumData.title}
-          </h1>
-        )}
 
-        {albumData.year && (
-          <h1 className="text-lg text-center my-4">
-            {albumData.year}
-          </h1>
-        )}
-
-        {albumData.listenHere && (
-          <ul className="flex gap-8">
-            {albumData.listenHere.map((link, idx) => (
-              <li key={link + idx}>{link}</li>
-            ))}
-          </ul>
-        )}
-      </div>
+      {(albumData.title && albumData.year) && (
+        <div className="mt-8">
+          <h1 className="text-2xl text-center">{albumData.title} - [{albumData.year}]</h1>
+        </div>
+      )}
     </Container>
-  );
+  )
 }
 
 type AlbumProps = {
@@ -94,7 +75,7 @@ function AlbumCard({ album, handleAlbumChange }: AlbumProps) {
 
   return (
     <div
-      className="w-60 aspect-square bg-cover z-10 shadow-black shadow-md cursor-pointer hover:scale-105 ease-in-out duration-300"
+      className="w-60 aspect-square bg-cover z-10 shadow-pink-500 shadow-lg cursor-pointer hover:scale-105 ease-in-out duration-300"
       style={{ backgroundImage: `url(${image})` }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
