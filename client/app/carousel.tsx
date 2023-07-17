@@ -33,6 +33,7 @@ function Carousel({ albums }: Props) {
           {albums.map((album, idx) => (
             <li key={idx}>
               <AlbumCard
+                currentTitle={albumData.title}
                 album={album}
                 handleAlbumChange={setAlbumData}
               />
@@ -53,9 +54,10 @@ function Carousel({ albums }: Props) {
 type AlbumProps = {
   album: Album;
   handleAlbumChange: React.Dispatch<React.SetStateAction<Album>>
+  currentTitle?: string;
 };
 
-function AlbumCard({ album, handleAlbumChange }: AlbumProps) {
+function AlbumCard({ album, handleAlbumChange, currentTitle }: AlbumProps) {
   const { title, year, image, listenHere } = album;
   const [hover, setHover] = useState(false)
 
@@ -75,7 +77,7 @@ function AlbumCard({ album, handleAlbumChange }: AlbumProps) {
 
   return (
     <div
-      className="w-60 aspect-square bg-cover z-10 shadow-pink-500 shadow-lg cursor-pointer hover:scale-105 ease-in-out duration-300"
+      className={`w-60 aspect-square bg-cover z-10 shadow-pink-500 shadow-lg cursor-pointer ease-in-out duration-300 ${title == currentTitle ? 'border-8 border-white scale-110' : ''}`}
       style={{ backgroundImage: `url(${image})` }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
