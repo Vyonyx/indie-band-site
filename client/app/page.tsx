@@ -1,6 +1,6 @@
 import Carousel from "./carousel";
 import type { Album } from "./carousel";
-
+import Container from '../components/container'
 export default function Home() {
   const albums: Album[] = [
     {
@@ -22,8 +22,10 @@ export default function Home() {
 
   return (
     <main className="">
-      <h1 className="text-2xl">JamStack</h1>
-      <Carousel albums={albums} />
+      <Container>
+        <h1 className="text-2xl">JamStack</h1>
+        <Carousel albums={albums} />
+      </Container>
     </main>
   );
 }
