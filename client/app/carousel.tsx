@@ -24,29 +24,31 @@ function Carousel({ albums }: Props) {
   })
 
   return (
-    <Container>
-      <div
-        className="w-full overflow-x-scroll py-2"
-        style={{ scrollbarWidth: 'thin' }}
-      >
-        <ul className="w-fit min-w-full flex justify-center items-center bg-pink-300 gap-10 p-8">
-          {albums.map((album, idx) => (
-            <li key={idx}>
-              <AlbumCard
-                album={album}
-                handleAlbumChange={setAlbumData}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {(albumData.title && albumData.year) && (
-        <div className="mt-8">
-          <h1 className="text-2xl text-center">{albumData.title} - [{albumData.year}]</h1>
+    <article>
+      <Container>
+        <div
+          className="w-full overflow-x-scroll py-2"
+          style={{ scrollbarWidth: 'thin' }}
+        >
+          <ul className="w-fit min-w-full flex justify-center items-center bg-pink-300 gap-10 p-8">
+            {albums.map((album, idx) => (
+              <li key={idx}>
+                <AlbumCard
+                  album={album}
+                  handleAlbumChange={setAlbumData}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
-    </Container>
+
+        {(albumData.title && albumData.year) && (
+          <div className="mt-8">
+            <h1 className="text-2xl text-center">{albumData.title} - [{albumData.year}]</h1>
+          </div>
+        )}
+      </Container>
+    </article>
   )
 }
 
