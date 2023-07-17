@@ -2,11 +2,10 @@ import React from "react";
 
 type Props = {
   children: React.ReactNode;
-  cssExtension?: string;
 };
 
-function Container({ children, cssExtension = "" }: Props) {
-  return <div className={"container mx-auto" + ' ' + cssExtension}>{children}</div>;
+function Container({ children }: Props) {
+  return <div className="container mx-auto">{children}</div>;
 }
 
 export default Container;
