@@ -76,7 +76,7 @@ function AlbumCard({ album, handleAlbumChange, currentTitle }: AlbumProps) {
 
   return (
     <div
-      className={`w-60 aspect-square bg-cover z-10 shadow-pink-500 shadow-lg cursor-pointer ease-in-out duration-300 ${title == currentTitle ? 'border-8 border-white scale-110' : ''}`}
+      className={`w-60 aspect-square bg-cover z-10 shadow-pink-500 shadow-lg cursor-pointer ease-in-out duration-300 ${title == currentTitle ? 'border-8 border-neutral-800 scale-110 shadow-inner shadow-neutral-700' : ''}`}
       style={{ backgroundImage: `url(${image})` }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
