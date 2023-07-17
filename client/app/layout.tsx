@@ -1,8 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Container from "../components/container";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ptSans } from "./fonts";
+import Navbar from "./Navbar";
 
 export const metadata = {
   title: "JamStack",
@@ -17,7 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${ptSans.className} font-normal`}>
+        <Navbar />
         <Container>
           {children}
         </Container>
