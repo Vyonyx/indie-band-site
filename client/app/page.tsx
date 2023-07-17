@@ -22,10 +22,8 @@ export default function Home() {
 
   return (
     <main className="">
-      <Container>
-        <h1 className="text-2xl">JamStack</h1>
-        <Carousel albums={albums} />
-      </Container>
+      <h1 className="text-2xl">JamStack</h1>
+      <Carousel albums={albums} />
     </main>
   );
 }
