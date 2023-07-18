@@ -1,7 +1,6 @@
-import "./globals.css";
-import Container from "../components/container";
-import { ptSans } from "./fonts";
 import Navbar from "./Navbar";
+import { ptSans } from "./fonts";
+import "./globals.css";
 
 export const metadata = {
   title: "JamStack",

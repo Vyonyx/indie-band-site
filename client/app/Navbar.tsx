@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
-import { ptSansNarrow, ptSans } from './fonts'
+import { ptSans, ptSansNarrow } from './fonts'
 
 type Props = {}
 

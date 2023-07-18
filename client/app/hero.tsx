@@ -1,4 +1,3 @@
-import React from 'react'
 import { ptSansNarrow } from './fonts'
 
 type Props = {}

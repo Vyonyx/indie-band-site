@@ -1,8 +1,7 @@
-import Carousel from "./carousel";
 import type { Album } from "./carousel";
-import Container from '../components/container'
-import Hero from "./hero";
+import Carousel from "./carousel";
 import Events from "./events";
+import Hero from "./hero";
 export default function Home() {
   const albums: Album[] = [
     {
