@@ -10,7 +10,7 @@ function Navbar({ }: Props) {
     <header className="bg-pink-400 py-2">
       <nav className="container mx-auto flex justify-between items-center">
         <Link href="/" className={`${ptSansNarrow.className} text-3xl ${linkStyles}`}>JamStack</Link>
-        <ul className="flex gap-4">
+        <ul className="flex gap-6">
           <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}><Link href="#">Merch</Link></li>
           <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}><Link href="#">Events</Link></li>
           <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}><Link href="#">Blog</Link></li>
