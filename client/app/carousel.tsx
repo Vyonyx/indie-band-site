@@ -23,7 +23,7 @@ function Carousel({ albums }: Props) {
   })
 
   return (
-    <article>
+    <article className="container mx-auto">
       <div
         className="w-full overflow-x-scroll py-2"
         style={{ scrollbarWidth: 'thin' }}
