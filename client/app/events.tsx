@@ -17,7 +17,10 @@ function Events({}: Props) {
           venue="Power Station"
           city="Auckland"
           state="VIC"
-          links={{ rsvp: "somelink.com", ticket: "someotherlink.com" }}
+          links={{
+            rsvp: "somelink.com",
+            ticket: "someotherlink.com",
+          }}
         />
 
         <ListedEvent
@@ -25,7 +28,10 @@ function Events({}: Props) {
           venue="Power Station"
           city="Auckland"
           state="VIC"
-          links={{ rsvp: "somelink.com", ticket: "someotherlink.com" }}
+          links={{
+            rsvp: "somelink.com",
+            ticket: "someotherlink.com",
+          }}
         />
 
         <ListedEvent
@@ -33,7 +39,10 @@ function Events({}: Props) {
           venue="Power Station"
           city="Auckland"
           state="VIC"
-          links={{ rsvp: "somelink.com", ticket: "someotherlink.com" }}
+          links={{
+            rsvp: "somelink.com",
+            ticket: "someotherlink.com",
+          }}
         />
       </ul>
     </section>
@@ -59,7 +68,10 @@ function ListedEvent({ date, venue, city, state, links }: ListEventProps) {
       <div className="flex gap-10">
         <span>
           <span>
-            {`${date.toLocaleString("default", { month: "short" })}`}.
+            {`${date.toLocaleString("default", {
+              month: "short",
+            })}`}
+            .
           </span>
           <span className="ml-2">{`${date.toLocaleString("default", {
             day: "2-digit",
