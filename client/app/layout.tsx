@@ -18,9 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${ptSans.className} font-normal text-neutral-800`}>
         <Navbar />
-        <Container>
-          {children}
-        </Container>
+        {children}
       </body>
     </html>
   );
