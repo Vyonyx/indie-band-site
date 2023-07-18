@@ -9,7 +9,7 @@ function Events({ }: Props) {
         Events
       </h1>
 
-      <ul className='mt-5 flex flex-col gap-3'>
+      <ul className='mt-5 flex flex-col'>
         <ListedEvent date={new Date} venue='Power Station' city='Auckland' state='VIC' links={{ rsvp: 'somelink.com', ticket: 'someotherlink.com' }} />
         <ListedEvent date={new Date} venue='Power Station' city='Auckland' state='VIC' links={{ rsvp: 'somelink.com', ticket: 'someotherlink.com' }} />
         <ListedEvent date={new Date} venue='Power Station' city='Auckland' state='VIC' links={{ rsvp: 'somelink.com', ticket: 'someotherlink.com' }} />
@@ -31,7 +31,7 @@ type ListEventProps = {
 
 function ListedEvent({ date, venue, city, state, links }: ListEventProps) {
   return (
-    <li className={`flex items-center justify-between gap-10 ${ptSans.className} text-lg hover:bg-pink-100`}>
+    <li className={`flex items-center py-2 px-4 justify-between gap-10 ${ptSans.className} text-lg hover:bg-pink-100`}>
       <div className='flex gap-10'>
         <span>
           <span>{`${date.toLocaleString('default', { month: 'short' })}`}.</span>
