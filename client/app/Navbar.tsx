@@ -5,10 +5,10 @@ import { ptSansNarrow, ptSans } from './fonts'
 type Props = {}
 
 function Navbar({ }: Props) {
-  const linkStyles = "cursor-pointer hover:text-white transition-color duration-200 ease-out"
+  const linkStyles = "transition-color cursor-pointer duration-200 ease-out hover:text-white"
   return (
     <header className="bg-pink-400 py-2">
-      <nav className="container mx-auto flex justify-between items-center">
+      <nav className="container mx-auto flex items-center justify-between">
         <Link href="/" className={`${ptSansNarrow.className} text-3xl ${linkStyles}`}>JamStack</Link>
         <ul className="flex gap-6">
           <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}><Link href="#">Merch</Link></li>

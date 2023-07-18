@@ -2,6 +2,7 @@ import Carousel from "./carousel";
 import type { Album } from "./carousel";
 import Container from '../components/container'
 import Hero from "./hero";
+import Events from "./events";
 export default function Home() {
   const albums: Album[] = [
     {
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
+      <Events />
       <Carousel albums={albums} />
     </main>
   );
