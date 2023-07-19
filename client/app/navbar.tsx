@@ -7,7 +7,7 @@ function Navbar({}: Props) {
   const linkStyles =
     "transition-color cursor-pointer duration-200 ease-out hover:text-white";
   return (
-    <header className="bg-pink-400 py-2">
+    <header className="hidden lg:block bg-pink-400 py-2">
       <nav className="container mx-auto flex items-center justify-between">
         <Link
           href="/"
