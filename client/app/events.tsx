@@ -4,7 +4,7 @@ type Props = {};
 
 function Events({}: Props) {
   return (
-    <section className="container mx-auto my-10 lg:my-14">
+    <section className="container mx-auto my-10 max-w-4xl lg:my-14">
       <h1
         className={`${ptSansNarrow.className} lg:text-left text-3xl text-center`}
       >
@@ -63,9 +63,9 @@ type ListEventProps = {
 function ListedEvent({ date, venue, city, state, links }: ListEventProps) {
   return (
     <li
-      className={`flex items-center py-2 px-4 justify-between gap-10 ${ptSans.className} text-lg hover:bg-pink-100`}
+      className={`flex border-t-2 border-pink-300 items-center py-2 px-4 justify-between gap-10 ${ptSans.className} text-lg hover:bg-pink-100`}
     >
-      <div className="flex gap-10">
+      <div className="flex flex-col lg:flex-row lg:gap-10">
         <span>
           <span>
             {`${date.toLocaleString("default", {
@@ -81,7 +81,7 @@ function ListedEvent({ date, venue, city, state, links }: ListEventProps) {
         <span className="font-bold">{venue}</span>
       </div>
 
-      <div className="flex items-center gap-20">
+      <div className="flex flex-col items-center lg:flex-row lg:gap-20">
         <span>
           <span>{city}</span>
           {state && <span>, {state}</span>}
