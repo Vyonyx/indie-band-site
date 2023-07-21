@@ -1,3 +1,4 @@
+import MiniNavbar from "@/components/mini-navbar";
 import type { Album } from "./carousel";
 import Carousel from "./carousel";
 import Events from "./events";
@@ -29,6 +30,7 @@ export default function Home() {
       <Hero />
       <Events />
       <Carousel albums={albums} />
+      <MiniNavbar />
     </main>
   );
 }
