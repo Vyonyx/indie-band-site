@@ -10,13 +10,13 @@ function MiniNavbar() {
 
       <ul className="flex max-w-lg mx-auto items-center justify-evenly gap-6">
         <li>
+          <Link href="#">Home</Link>
+        </li>
+        <li>
+          <Link href="#">News</Link>
+        </li>
+        <li>
           <Link href="#">Merch</Link>
-        </li>
-        <li>
-          <Link href="#">Events</Link>
-        </li>
-        <li>
-          <Link href="#">Blog</Link>
         </li>
       </ul>
     </nav>

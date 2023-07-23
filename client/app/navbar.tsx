@@ -17,15 +17,15 @@ function Navbar({}: Props) {
         </Link>
         <ul className="flex gap-6">
           <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}>
+            <Link href="#">Home</Link>
+          </li>
+
+          <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}>
+            <Link href="#">News</Link>
+          </li>
+
+          <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}>
             <Link href="#">Merch</Link>
-          </li>
-
-          <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}>
-            <Link href="#">Events</Link>
-          </li>
-
-          <li className={`text-lg font-bold ${ptSans.className} ${linkStyles}`}>
-            <Link href="#">Blog</Link>
           </li>
         </ul>
       </nav>
