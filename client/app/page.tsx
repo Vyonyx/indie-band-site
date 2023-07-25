@@ -3,6 +3,7 @@ import type { Album } from "./carousel";
 import Carousel from "./carousel";
 import Events from "./events";
 import Hero from "./hero";
+import News from "./news";
 export default function Home() {
   const albums: Album[] = [
     {
@@ -31,6 +32,7 @@ export default function Home() {
       <Events />
       <Carousel albums={albums} />
       <MiniNavbar />
+      <News />
     </main>
   );
 }

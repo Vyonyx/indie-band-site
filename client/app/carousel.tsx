@@ -134,7 +134,9 @@ function ListenAtSVGIcon({ name, link, children }: ListenIconProps) {
           >
             {children}
           </svg>
-          <figcaption className={`text-sm mt-1 ${isHovered ? "underline" : ""}`}>
+          <figcaption
+            className={`text-sm mt-1 ${isHovered ? "underline" : ""}`}
+          >
             {name}
           </figcaption>
         </figure>
