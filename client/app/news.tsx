@@ -12,11 +12,32 @@ function News({}: Props) {
         News
       </h3>
       <ul className="mt-5 flex flex-col">
-        <li>News Item 1</li>
-        <li>News Item 1</li>
-        <li>News Item 1</li>
+        <NewsItem title="Title 1" date={new Date()} />
+        <NewsItem title="Title 2" date={new Date()} />
+        <NewsItem title="Title 3" date={new Date()} />
+        <NewsItem title="Title 4" date={new Date()} />
       </ul>
     </section>
+  );
+}
+
+type NewsItemProps = {
+  title: string;
+  date: Date;
+};
+
+function NewsItem({ title, date }: NewsItemProps) {
+  return (
+    <li className="align-center flex justify-between bg-neutral-200 p-4">
+      <h4 className="text-lg font-bold">{title}</h4>
+      <span>
+        {`${date.toLocaleString("default", {
+          month: "short",
+        })}. ${date.toLocaleString("default", {
+          day: "2-digit",
+        })}`}
+      </span>
+    </li>
   );
 }
 
