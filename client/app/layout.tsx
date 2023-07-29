@@ -15,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${ptSans.className} font-normal text-neutral-800`}>
+      <body
+        className={`${ptSans.className} font-normal text-neutral-800`}
+        suppressHydrationWarning={true}
+      >
         <Navbar />
         {children}
       </body>
