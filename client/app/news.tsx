@@ -1,9 +1,19 @@
 import React from "react";
 import { ptSansNarrow } from "./fonts";
 
-type Props = {};
+async function getNews() {
+  return new Promise<NewsItemProps[]>((resolve, _reject) => {
+    resolve([
+      { title: "Title 1", date: new Date() },
+      { title: "Title 2", date: new Date() },
+      { title: "Title 3", date: new Date() },
+    ]);
+  });
+}
 
-function News({}: Props) {
+async function News() {
+  const news = await getNews();
+
   return (
     <section className="container mx-auto my-10 lg:my-14">
       <h3
@@ -12,15 +22,15 @@ function News({}: Props) {
         News
       </h3>
       <ul className="mt-5 flex flex-col">
-        <NewsItem title="Title 1" date={new Date()} />
-        <NewsItem title="Title 2" date={new Date()} />
-        <NewsItem title="Title 3" date={new Date()} />
-        <NewsItem title="Title 4" date={new Date()} />
+        {news.map(({ title, date }, id) => (
+          <NewsItem key={id} title={title} date={date} />
+        ))}
       </ul>
     </section>
   );
 }
 
+// ------Sub-Components------ //
 type NewsItemProps = {
   title: string;
   date: Date;
